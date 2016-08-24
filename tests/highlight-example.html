@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Tree View</title>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/patternfly/3.9.0/css/patternfly.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/patternfly/3.9.0/css/patternfly-additions.css" rel="stylesheet">
+    <link href="./lib/bootstrap-treeview.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h2>Bootstrap Tree View - Highlight Example</h2>
+    <br/>
+    <div class="row">
+        <div class="col-sm-12">
+            <label for="treeview"></label>
+            <div id="treeview"/>
+        </div>
+    </div>
+</div>
+<script src="./lib/jquery.js"></script>
+<script src="./lib/bootstrap-treeview.js"></script>
+<script type="text/javascript">
+
+    $(function() {
+
+        var json = '[' +
+        '{' +
+          '"text": "Parent 1",' +
+          '"nodes": [' +
+            '{' +
+              '"text": "Child 1",' +
+              '"nodes": [' +
+                '{' +
+                  '"text": "Grandchild 1"' +
+                '},' +
+                '{' +
+                  '"text": "Grandchild 2"' +
+                '}' +
+              ']' +
+            '},' +
+            '{' +
+              '"text": "Child 2"' +
+            '}' +
+          ']' +
+        '},' +
+        '{' +
+          '"text": "Parent 2"' +
+        '},' +
+        '{' +
+          '"text": "Parent 3"' +
+        '},' +
+        '{' +
+          '"text": "Parent 4"' +
+        '},' +
+        '{' +
+          '"text": "Parent 5"' +
+        '}' +
+        ']';
+
+        //Hierarchal Checks
+        $('#treeview').treeview({
+            collapseIcon: "fa fa-angle-down",
+            data: json,
+            expandIcon: "fa fa-angle-right",
+            levels: 99,
+            nodeIcon: "fa fa-folder",
+            showBorder: false,
+            showCheckbox: true,
+            checkboxFirst: true,
+            highlightChanges: true,
+            changedNodeColor: '#39A5DC'
+        });
+    });
+</script>
+</body>

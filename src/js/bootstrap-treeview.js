@@ -44,7 +44,7 @@
 		color: undefined,
 		backColor: undefined,
 		borderColor: undefined,
-		changedNodeColor: 'blue',
+		changedNodeColor: '#39A5DC',
 		onhoverColor: '#F5F5F5',
 		selectedColor: '#FFFFFF',
 		selectedBackColor: '#428bca',
